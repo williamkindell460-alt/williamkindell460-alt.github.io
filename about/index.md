@@ -1,75 +1,66 @@
-# Hi, I'm William Kindell
+# About Me
 
-I'm an Embedded Systems & Robotics Engineer with a focus on **sensor systems**, **real‑time data processing**, and **environmental monitoring technology**. I enjoy building systems that bridge hardware, firmware, and host‑side analysis — especially projects that turn raw telemetry into meaningful insights.
+I am an Embedded Systems and Electrical Engineering student with a focus on **sensor systems**, **environmental monitoring**, and **host‑side data analysis pipelines**. My work centers on building reliable, well‑structured systems that integrate hardware, firmware, and analytical tooling into a cohesive engineering solution.
 
-I study Electrical & Computer Engineering and spend most of my engineering time working on:
+I prioritize clarity, maintainability, and correctness in all stages of development. My projects emphasize:
 
-- Embedded firmware (ESP32, STM32)
-- Sensor integration (BME680, CCS811, I²C)
-- SD logging + data pipelines
-- Host‑side analysis tools in C/C++
-- Trend and anomaly detection
-- Real‑time visualization and environmental interpretation
+- Deterministic firmware behavior  
+- Robust error handling and recovery  
+- Modular host‑side analysis pipelines  
+- Comprehensive documentation and testing  
+- Long‑duration environmental data collection  
 
 ---
 
-## Current Project: Climate Monitoring System
+## Technical Focus Areas
 
-I'm developing a full environmental monitoring stack consisting of:
+- **Embedded Systems:** ESP32, STM32, sensor drivers, SD logging, low‑power design  
+- **Data Processing:** CSV ingestion, binary normalization, trend and anomaly detection  
+- **Host‑Side Tooling:** C/C++ analysis pipelines, CLI tooling, performance benchmarking  
+- **Software Quality:** Unit tests (Unity), pipeline tests, CI integration, static analysis  
+- **Documentation:** Architecture overviews, pipeline descriptions, engineering tradeoffs  
 
-### **ESP32 Firmware**
-- Sensor drivers  
-- SD logging  
-- Error handling  
-- Deterministic sampling  
-- (Planned) UART telemetry + CRC  
-- (Planned) Wi‑Fi `/latest.csv` endpoint  
+---
 
-### **Host‑Side Analysis Pipeline**  
-Fully complete and includes:
-- CSV ingestion → binary normalization  
+## Current Work
+
+I am developing a complete climate‑monitoring system consisting of:
+
+### **ESP32 Firmware (In Progress)**
+- Sensor integration (BME680, CCS811)  
+- Deterministic sampling and logging  
+- SD write reliability and recovery  
+- Error codes and diagnostic modes  
+- Planned additions: UART telemetry, CRC framing, Wi‑Fi log transfer, sleep/wake cycle  
+
+### **Host‑Side Analysis Pipeline (Complete)**
+- CSV → binary conversion  
 - Statistics, trends, anomalies  
 - ASCII sparklines  
-- PNG plot generation  
+- Multi‑channel PNG plot generation  
 - Summary report creation  
 - CLI flag parser  
-- Unit tests + pipeline tests  
-- Performance benchmark (1.7s for ~80 years of data)
+- Full test suite and performance benchmark  
 
-This pipeline transforms raw logs into a complete environmental analysis package.
-
----
-
-## What I Build
-
-I like designing systems that are:
-
-- **Modular** — clean separation between firmware, host tools, and data  
-- **Reliable** — error recovery, validation, and long‑duration stability  
-- **Interpretable** — turning sensor data into readable insights  
-- **Documented** — architecture notes, diagrams, and engineering tradeoffs  
-
-My projects emphasize both **technical depth** and **clarity of explanation**.
+This pipeline transforms raw sensor logs into a structured, interpretable environmental analysis package.
 
 ---
 
-## Engineering Interests
+## Engineering Values
 
-- Embedded systems  
-- Real‑time operating systems  
-- Sensor fusion  
-- Environmental monitoring  
-- Data pipelines  
-- Firmware reliability  
-- Hardware–software integration  
+- **Reliability:** Systems should behave predictably under real‑world conditions.  
+- **Transparency:** Clear documentation and readable output matter as much as code.  
+- **Modularity:** Each component should be testable and independently maintainable.  
+- **Rigor:** Data should be validated, analyzed, and interpreted with care.  
+- **Scalability:** Designs should support future expansion without major restructuring.  
 
 ---
 
-## Long‑Term Goals
+## Professional Goals
 
-- Build robust embedded systems used in real‑world environments  
-- Work in robotics, aerospace, or environmental sensing  
-- Continue developing full‑stack engineering skills (firmware → analysis → visualization)
+- Contribute to embedded systems, robotics, or environmental sensing projects  
+- Develop robust firmware and analytical tools used in real‑world deployments  
+- Continue expanding expertise in low‑power systems, sensor fusion, and data pipelines  
 
 ---
 
@@ -78,6 +69,4 @@ My projects emphasize both **technical depth** and **clarity of explanation**.
 - **GitHub Pages:** https://williamkindell460-alt.github.io  
 - **GitHub:** https://github.com/williamkindell460-alt  
 - **Email:** williamkindell460@gmail.com
-- **Linkedin:** https://www.linkedin.com/in/williamkindell/
-
-Feel free to explore my repositories. I try to document everything thoroughly and keep my projects structured, tested, and reproducible.
+- **LinkedIn:** https://www.linkedin.com/in/williamkindell/
