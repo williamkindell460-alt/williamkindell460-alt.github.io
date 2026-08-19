@@ -1,54 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>William Kindell – Embedded Systems & Electrical Engineering</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px;
-            line-height: 1.6;
-            color: #222;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        hr {
-            margin: 30px 0;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            margin-top: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>William Kindell – Embedded Systems Engineer</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<!-- AOS Animation Library -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #0f0f1a, #1a1a2e, #16213e);
+        color: #e6e6e6;
+        line-height: 1.7;
+    }
+
+    header {
+        text-align: center;
+        padding: 80px 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #00eaff;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+        color: #9ae6ff;
+        font-weight: 400;
+    }
+
+    section {
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 30px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 14px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.1);
+        transition: transform 0.3s;
+    }
+
+    section:hover {
+        transform: translateY(-4px);
+    }
+
+    h2 {
+        color: #00eaff;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    a {
+        color: #00eaff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        color: #ff6f91;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    .contact-list li {
+        margin-bottom: 8px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px;
+        color: #888;
+    }
+</style>
 </head>
 
 <body>
 
+<header data-aos="fade-down">
     <h1>William Kindell</h1>
     <h3>Embedded Systems & Electrical Engineering</h3>
+</header>
 
+<section data-aos="fade-up">
     <p>
         I develop structured, reliable embedded systems with a focus on sensor integration,
         environmental monitoring, and host‑side analytical tooling. My work emphasizes deterministic
         behavior, robust error handling, and clear documentation across all layers of a system.
-        This site serves as a professional overview of my engineering projects, technical interests,
-        and supporting documentation.
     </p>
+</section>
 
-    <hr>
-
+<section data-aos="fade-up">
     <h2>Featured Project: Climate Monitoring System</h2>
-
     <p>A multi‑component environmental monitoring platform consisting of:</p>
 
     <ul>
@@ -60,11 +113,10 @@
     <p><strong>Project Overview:</strong><br>
         <a href="blog/esp32-climate-system.html">ESP32 Climate Monitoring System</a>
     </p>
+</section>
 
-    <hr>
-
+<section data-aos="fade-up">
     <h2>Technical Areas</h2>
-
     <ul>
         <li>Embedded firmware development (ESP32, STM32)</li>
         <li>Sensor systems and environmental data acquisition</li>
@@ -74,42 +126,43 @@
         <li>Deterministic sampling and reliability engineering</li>
         <li>Documentation‑driven development practices</li>
     </ul>
+</section>
 
-    <hr>
-
+<section data-aos="fade-up">
     <h2>Blog</h2>
-
     <p>Technical write‑ups and engineering documentation.</p>
-
     <ul>
         <li><a href="blog/">Blog</a></li>
     </ul>
+</section>
 
-    <p>Additional posts will be added as development progresses.</p>
-
-    <hr>
-
+<section data-aos="fade-up">
     <h2>About</h2>
-
     <p>
         I am an Embedded Systems and Electrical Engineering student focused on building reliable,
-        well‑documented systems that bridge hardware, firmware, and host‑side analysis. My engineering
-        approach emphasizes clarity, modularity, and long‑term maintainability.
+        well‑documented systems that bridge hardware, firmware, and host‑side analysis.
     </p>
 
     <p><strong>More information:</strong><br>
         <a href="about.html">About Me</a>
     </p>
+</section>
 
-    <hr>
-
+<section data-aos="fade-up">
     <h2>Contact</h2>
-
-    <ul>
-        <li><strong>GitHub:</strong> <a href="https://github.com/williamkindell460-alt">https://github.com/williamkindell460-alt</a></li>
+    <ul class="contact-list">
+        <li><strong>GitHub:</strong> <a href="https://github.com/williamkindell460-alt">github.com/williamkindell460-alt</a></li>
         <li><strong>Email:</strong> williamkindell460@gmail.com</li>
-        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/williamkindell/">https://www.linkedin.com/in/williamkindell/</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/williamkindell/">linkedin.com/in/williamkindell</a></li>
     </ul>
+</section>
+
+<footer>
+    © 2026 William Kindell
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
 
 </body>
 </html>
