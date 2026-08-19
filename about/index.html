@@ -10,70 +10,6 @@
 
 <!-- AOS Animation Library -->
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-
-<style>
-    body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background: linear-gradient(135deg, #0f0f1a, #1a1a2e, #16213e);
-        color: #e6e6e6;
-        line-height: 1.7;
-        padding-bottom: 60px;
-    }
-
-    header {
-        text-align: center;
-        padding: 80px 20px 40px;
-    }
-
-    h1 {
-        font-size: 3rem;
-        font-weight: 800;
-        color: #00eaff;
-        margin-bottom: 10px;
-    }
-
-    h2 {
-        color: #00eaff;
-        font-weight: 600;
-        margin-bottom: 10px;
-    }
-
-    section {
-        max-width: 900px;
-        margin: 40px auto;
-        padding: 30px;
-        background: rgba(255,255,255,0.05);
-        border-radius: 14px;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.1);
-        transition: transform 0.3s;
-    }
-
-    section:hover {
-        transform: translateY(-4px);
-    }
-
-    ul {
-        padding-left: 20px;
-    }
-
-    a {
-        color: #00eaff;
-        text-decoration: none;
-        font-weight: 600;
-    }
-
-    a:hover {
-        color: #ff6f91;
-    }
-
-    footer {
-        text-align: center;
-        padding: 40px;
-        color: #888;
-    }
-</style>
 </head>
 
 <body>
@@ -81,7 +17,7 @@
 <header data-aos="fade-down">
     <h1>About Me</h1>
 </header>
-
+<button id="theme-toggle">Toggle Theme</button>
 <section data-aos="fade-up">
     <p>
         I am an Embedded Systems and Electrical Engineering student with a focus on
@@ -181,6 +117,7 @@
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>AOS.init();</script>
+<script src="index.js"></script>
 
 </body>
 </html>
