@@ -1,2 +1,4 @@
 # William Kindell
-That is my name.
+Embedded Systems & Robotics Engineer
+
+Welcome to my engineering blog and portfolio.
