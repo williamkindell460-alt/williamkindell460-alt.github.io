@@ -117,3 +117,7 @@ footer {
     background: rgba(0,0,0,0.1);
     color: #222;
 }
+
+body, section, h1, h2, h3, p, a {
+    transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
