@@ -69,7 +69,7 @@ Automation helpers:
 
 ---
 
-# 📡 Firmware Status (Current)
+# Firmware Status (Current)
 
 The firmware is partially implemented and currently supports:
 
