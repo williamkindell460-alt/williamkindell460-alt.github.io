@@ -6,19 +6,16 @@ body {
     line-height: 1.7;
 }
 
-header {
-    text-align: center;
-    padding: 80px 20px;
-}
-
 .hero-header {
     text-align: center;
     padding: 80px 20px;
 }
 
 #site-header {
-    position: relative;
-    z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
 }
 
 #site-header .navbar {
@@ -228,7 +225,7 @@ body, section, h1, h2, h3, p, a {
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255,255,255,0.15);
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1000;
 }
