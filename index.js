@@ -42,6 +42,11 @@ async function loadComponent(id, file) {
 
         // Re-run scripts AFTER the component is injected
         initSiteScripts();
+
+        // Re-run AOS so animations apply to dynamically loaded content
+        if (window.AOS) {
+            AOS.refresh();
+        }
     } catch (err) {
         console.error("Component load failed:", file, err);
     }
