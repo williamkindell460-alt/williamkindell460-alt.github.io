@@ -48,5 +48,5 @@ async function loadComponent(id, file) {
 }
 
 // Inject header + footer
-loadComponent("site-header", "/components/header.html");
-loadComponent("site-footer", "/components/footer.html");
+loadComponent("site-header", "/include/header.html");
+loadComponent("site-footer", "/include/footer.html");
