@@ -8,18 +8,34 @@
 <!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
 <!-- AOS Animation Library -->
 <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 
 </head>
 
 <body>
+<nav class="navbar">
+    <div class="nav-brand">
+        <a href="/main.html">William Kindell</a>
+    </div>
 
+    <button class="nav-toggle" id="nav-toggle">☰</button>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="/main.html">Home</a></li>
+        <li><a href="/blog/blog.html">Blog</a></li>
+        <li><a href="/portfolio/portfolio.html">Portfolio</a></li>
+        <li><a href="/about/about.html">About</a></li>
+        <li><a href="/contact/contact.html">Contact</a></li>
+
+        <li><button id="theme-toggle" class="theme-btn">Theme</button></li>
+    </ul>
+</nav>
 <header data-aos="fade-down">
     <h1>William Kindell</h1>
     <h3>Embedded Systems & Electrical Engineering</h3>
 </header>
-<button id="theme-toggle">Toggle Theme</button>
 <section data-aos="fade-up">
     <p>
         I develop structured, reliable embedded systems with a focus on sensor integration,
@@ -90,7 +106,7 @@
     
 <section data-aos="fade-up">
     <h2>Contact</h2>
-    <ul class="contact-list">
+    <ul id="contact">
         <li><strong>GitHub:</strong> <a href="https://github.com/williamkindell460-alt">github.com/williamkindell460-alt</a></li>
         <li><strong>Email:</strong> williamkindell460@gmail.com</li>
         <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/williamkindell/">linkedin.com/in/williamkindell</a></li>

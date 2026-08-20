@@ -1,0 +1,32 @@
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.08);
+    color: #e6e6e6;
+    font-size: 1rem;
+    backdrop-filter: blur(6px);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00eaff;
+}
+
+.light-mode .contact-form input,
+.light-mode .contact-form textarea {
+    background: rgba(0,0,0,0.05);
+    color: #222;
+    border-color: rgba(0,0,0,0.2);
+}
+    

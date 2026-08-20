@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact – William Kindell</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+</head>
+
+<body>
+<div id="global-nav"></div>
+
+<header data-aos="fade-down">
+    <h1>Contact Me</h1>
+    <h3>Get in touch for engineering collaborations, embedded systems work, or technical questions</h3>
+</header>
+
+<section data-aos="fade-up">
+    <h2>Send a Message</h2>
+    <p>Fill out the form below and I’ll receive your message directly via email.</p>
+
+    <form action="https://formsubmit.co/williamkindell460@gmail.com" method="POST" class="contact-form">
+
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_subject" value="New message from your website">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <label>First Name</label>
+        <input type="text" name="first-name" required>
+
+        <label>Last Name</label>
+        <input type="text" name="last-name" required>
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Message</label>
+        <textarea name="message" rows="6" required></textarea>
+
+        <button type="submit" class="theme-btn">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2026 William Kindell
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script src="index.js"></script>
+</body>
+</html>
