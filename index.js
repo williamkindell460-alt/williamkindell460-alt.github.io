@@ -3,26 +3,50 @@ if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light-mode");
 }
 
-// Mobile Navigation Toggle
-const navToggle = document.getElementById("nav-toggle");
-const navLinks = document.getElementById("nav-links");
+// Wait until header/footer components are loaded
+function initSiteScripts() {
+    // Mobile Navigation Toggle
+    const navToggle = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
 
-if (navToggle && navLinks) {
-    navToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("open");
-    });
+    if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+        });
+    }
+
+    // Theme Toggle Button
+    const toggle = document.getElementById("theme-toggle");
+
+    if (toggle) {
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("light-mode");
+
+            localStorage.setItem(
+                "theme",
+                document.body.classList.contains("light-mode") ? "light" : "dark"
+            );
+        });
+    }
 }
 
-// Theme Toggle Button
-const toggle = document.getElementById("theme-toggle");
+// Load header/footer components
+async function loadComponent(id, file) {
+    const el = document.getElementById(id);
+    if (!el) return;
 
-if (toggle) {
-    toggle.addEventListener("click", () => {
-        document.body.classList.toggle("light-mode");
+    try {
+        const res = await fetch(file);
+        const html = await res.text();
+        el.innerHTML = html;
 
-        localStorage.setItem(
-            "theme",
-            document.body.classList.contains("light-mode") ? "light" : "dark"
-        );
-    });
+        // Re-run scripts AFTER the component is injected
+        initSiteScripts();
+    } catch (err) {
+        console.error("Component load failed:", file, err);
+    }
 }
+
+// Inject header + footer
+loadComponent("site-header", "/components/header.html");
+loadComponent("site-footer", "/components/footer.html");
