@@ -4,12 +4,11 @@ body {
     background: linear-gradient(135deg, #0f0f1a, #1a1a2e, #16213e);
     color: #e6e6e6;
     line-height: 1.7;
-    padding-bottom: 60px;
 }
 
 header {
     text-align: center;
-    padding: 80px 20px 40px;
+    padding: 80px 20px;
 }
 
 h1 {
@@ -19,65 +18,10 @@ h1 {
     margin-bottom: 10px;
 }
 
-h2 {
-    color: #00eaff;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 30px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 14px;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.1);
-    transition: transform 0.3s;
-}
-
-section:hover {
-    transform: translateY(-4px);
-}
-
-ul {
-    padding-left: 20px;
-}
-
-a {
-    color: #00eaff;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-a:hover {
-    color: #ff6f91;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    color: #888;
-}
-#theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 18px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-    font-weight: 600;
-    background: rgba(255,255,255,0.15);
-    color: #e6e6e6;
-    backdrop-filter: blur(6px);
-    transition: 0.3s;
-    z-index: 999;
-}
-
-#theme-toggle:hover {
-    background: rgba(255,255,255,0.25);
-    transform: scale(1.05);
+h3 {
+    font-size: 1.4rem;
+    color: #9ae6ff;
+    font-weight: 400;
 }
 
 /* LIGHT MODE THEME */
@@ -102,12 +46,170 @@ footer {
 .light-mode a {
     color: #0077cc;
 }
+.light-mode a:hover {
+    color: #005fa3;
+}
 
-.light-mode #theme-toggle {
-    background: rgba(0,0,0,0.1);
-    color: #222;
+section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: transform 0.3s;
+}
+
+section:hover {
+    transform: translateY(-4px);
+}
+
+h2 {
+    color: #00eaff;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+a {
+    color: #00eaff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #ff6f91;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+#contact li {
+    margin-bottom: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #888;
 }
 
 body, section, h1, h2, h3, p, a {
     transition: color 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+/* NAVIGATION BAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 28px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand a {
+    font-weight: 800;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #00eaff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #e6e6e6;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #ff6f91;
+}
+
+/* Theme Button */
+.theme-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: rgba(255,255,255,0.15);
+    color: #e6e6e6;
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+
+.theme-btn:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.05);
+}
+
+/* Mobile Toggle */
+.nav-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: #e6e6e6;
+    cursor: pointer;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(255,255,255,0.08);
+        backdrop-filter: blur(10px);
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 10px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .theme-btn {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* LIGHT MODE NAV */
+.light-mode .navbar {
+    background: rgba(0,0,0,0.05);
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.light-mode .nav-brand a {
+    color: #0077cc;
+}
+
+.light-mode .nav-links a {
+    color: #222;
+}
+
+.light-mode .nav-links a:hover {
+    color: #005fa3;
+}
+
+.light-mode .theme-btn {
+    background: rgba(0,0,0,0.1);
+    color: #222;
 }
