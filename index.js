@@ -3,7 +3,7 @@ if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light-mode");
 }
 
-// Wait until header/footer components are loaded
+// Initialize scripts AFTER header/footer load
 function initSiteScripts() {
     // Mobile Navigation Toggle
     const navToggle = document.getElementById("nav-toggle");
