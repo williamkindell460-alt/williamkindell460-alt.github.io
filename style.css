@@ -375,6 +375,51 @@ body, section, h1, h2, h3, p, a {
         text-align: center;
     }
 }
+/* Footer Icons */
+.footer-icons {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-icons li {
+    margin: 0.4rem 0;
+}
+
+.footer-icons a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.footer-icons img {
+    width: 20px;
+    height: 20px;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.footer-icons a:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Light Mode Icons */
+.light-mode .footer-icons a {
+    color: #0077cc;
+}
+
+.light-mode .footer-icons a:hover {
+    color: #005fa3;
+}
+
+.light-mode .footer-icons img {
+    filter: invert(20%) sepia(80%) saturate(600%) hue-rotate(180deg);
+}
+
 /* LIGHT MODE FOOTER */
 .light-mode .main-footer {
     background: rgba(0,0,0,0.05);
