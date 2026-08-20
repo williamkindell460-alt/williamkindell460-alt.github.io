@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ESP32 Climate Monitoring System – Full Overview</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<!-- AOS Animation Library -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #0f0f1a, #1a1a2e, #16213e);
+        color: #e6e6e6;
+        line-height: 1.7;
+        padding-bottom: 60px;
+    }
+
+    header {
+        text-align: center;
+        padding: 80px 20px 40px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #00eaff;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        color: #00eaff;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        color: #9ae6ff;
+        font-weight: 600;
+        margin-top: 20px;
+    }
+
+    section {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 30px;
+        background: rgba(255,255,255,0.05);
+        border-radius: 14px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.1);
+        transition: transform 0.3s;
+    }
+
+    section:hover {
+        transform: translateY(-4px);
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    a {
+        color: #00eaff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        color: #ff6f91;
+    }
+
+    .placeholder {
+        margin: 20px 0;
+        padding: 20px;
+        border: 1px dashed rgba(255,255,255,0.3);
+        border-radius: 10px;
+        text-align: center;
+        color: #9ae6ff;
+        font-size: 0.9rem;
+        font-style: italic;
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px;
+        color: #888;
+    }
+</style>
+</head>
+
+<body>
+
+<header data-aos="fade-down">
+    <h1>ESP32 Climate Monitoring System</h1>
+    <p>A complete environmental monitoring system featuring an ESP32 firmware stack and a fully‑integrated host‑side analysis pipeline.</p>
+</header>
+
+<section data-aos="fade-up">
+    <h2>Project Overview</h2>
+    <p>
+        This project is a long‑term environmental monitoring system built around an
+        <strong>ESP32</strong>, designed to collect climate‑relevant sensor data and transform it
+        into a complete analysis package using a modular <strong>host‑side toolchain</strong>.
+    </p>
+
+    <!-- Placeholder for hardware hero image -->
+    <div class="placeholder">
+        <!-- Insert hardware hero image here (ESP32 + sensors) -->
+        <!-- Example: <img src="images/esp32_setup.jpg" alt="ESP32 Hardware Setup"> -->
+        [Hardware Image Placeholder]
+    </div>
+
+    <ul>
+        <li><strong>Local SD logging</strong> of sensor readings</li>
+        <li><strong>Structured CSV output</strong></li>
+        <li><strong>Complete host‑side analysis pipeline</strong></li>
+        <li>Trend detection, anomaly detection, statistics, sparklines, PNG plot generation</li>
+        <li>Professional multi‑module architecture</li>
+    </ul>
+</section>
+
+<section data-aos="fade-up">
+    <h2>Repository Architecture</h2>
+
+    <!-- Placeholder for architecture diagram -->
+    <div class="placeholder">
+        <!-- Insert architecture diagram here -->
+        [Architecture Diagram Placeholder]
+    </div>
+
+    <h3>01_firmware/</h3>
+    <ul>
+        <li>Sensor drivers</li>
+        <li>Logging system</li>
+        <li>Error codes</li>
+        <li>Sleep cycle logic</li>
+        <li>Main application</li>
+    </ul>
+
+    <h3>02_host_tool/</h3>
+    <ul>
+        <li>CSV ingestion</li>
+        <li>Binary export</li>
+        <li>Statistics</li>
+        <li>Trend detection</li>
+        <li>Anomaly detection</li>
+        <li>Plot generation</li>
+        <li>Summary report creation</li>
+        <li>CLI flag parser</li>
+        <li>Unit tests + pipeline tests</li>
+        <li>Performance benchmarks</li>
+    </ul>
+
+    <h3>03_data/</h3>
+    <ul>
+        <li>Raw logs</li>
+        <li>Processed CSV files</li>
+        <li>Binary files</li>
+        <li>Generated plots</li>
+    </ul>
+
+    <h3>04_docs/</h3>
+    <ul>
+        <li>Hardware setup</li>
+        <li>Firmware overview</li>
+        <li>Host tool pipeline</li>
+        <li>Architecture notes</li>
+        <li>Climate relevance</li>
+        <li>Engineering tradeoffs</li>
+    </ul>
+
+    <h3>05_scripts/</h3>
+    <ul>
+        <li>Firmware flashing</li>
+        <li>Pipeline runner</li>
+        <li>Test runner</li>
+        <li>CSV conversion utilities</li>
+    </ul>
+</section>
+
+<section data-aos="fade-up">
+    <h2>Firmware Status</h2>
+
+    <!-- Placeholder for firmware flow diagram -->
+    <div class="placeholder">
+        <!-- Insert firmware flowchart here -->
+        [Firmware Flowchart Placeholder]
+    </div>
+
+    <p>The firmware is partially implemented and currently supports:</p>
+    <ul>
+        <li>Structured repository layout</li>
+        <li>Sensor API analysis</li>
+        <li>SD logging design</li>
+        <li>Error handling design</li>
+        <li>Initial driver scaffolding</li>
+    </ul>
+
+    <p>Planned features:</p>
+    <ul>
+        <li>UART telemetry</li>
+        <li>CRC packet framing</li>
+        <li>Wi‑Fi log transfer endpoint</li>
+        <li>Low‑power benchmarks</li>
+        <li>Sensor self‑test mode</li>
+    </ul>
+</section>
+
+<section data-aos="fade-up">
+    <h2>Host‑Side Analysis Pipeline</h2>
+
+    <!-- Placeholder for data visualization example -->
+    <div class="placeholder">
+        <!-- Insert example PNG plot or sparkline screenshot -->
+        [Data Visualization Placeholder]
+    </div>
+
+    <h3>1. Sensor Data Ingestion</h3>
+    <ul>
+        <li>CSV discovery</li>
+        <li>CSV parsing</li>
+        <li>Value extraction</li>
+        <li>Binary export</li>
+    </ul>
+
+    <h3>2. Data Analysis</h3>
+    <ul>
+        <li>Basic statistics</li>
+        <li>Trend detection</li>
+        <li>Anomaly detection</li>
+    </ul>
+
+    <h3>3. Plot Generation</h3>
+    <ul>
+        <li>CSV loading</li>
+        <li>Normalization</li>
+        <li>Multi‑channel rendering</li>
+        <li>Timestamped PNG export</li>
+    </ul>
+
+    <h3>4. Summary Output</h3>
+    <ul>
+        <li>Summary statistics</li>
+        <li>Anomaly results</li>
+        <li>Trend overview</li>
+        <li>Environmental interpretation</li>
+        <li>Pipeline status</li>
+    </ul>
+</section>
+
+<section data-aos="fade-up">
+    <h2>Execution Flow</h2>
+
+    <!-- Placeholder for pipeline diagram -->
+    <div class="placeholder">
+        <!-- Insert pipeline diagram here -->
+        [Pipeline Diagram Placeholder]
+    </div>
+
+    <ol>
+        <li>Sensor Data Ingestion</li>
+        <li>Data Analysis</li>
+        <li>Plot Generation</li>
+        <li>Summary Output</li>
+    </ol>
+</section>
+
+<section data-aos="fade-up">
+    <h2>Development Progress</h2>
+    <h3>Host Tool (Days 1–7)</h3>
+    <ul>
+        <li>CSV parser</li>
+        <li>Trend analysis</li>
+        <li>Anomaly detection</li>
+        <li>CMake + Ninja</li>
+        <li>CLI parser</li>
+        <li>Tests + benchmarks</li>
+        <li>ASCII sparklines</li>
+        <li>Full integration</li>
+    </ul>
+
+    <h3>Firmware (Days 8–13)</h3>
+    <ul>
+        <li>Repository structure</li>
+        <li>Sensor API analysis</li>
+        <li>SD logging design</li>
+        <li>Telemetry stress testing</li>
+    </ul>
+
+    <h3>Firmware Finished (Days 13–26)</h3>
+    <ul>
+        <li>Firmware completed</li>
+        <li>Host tool refined</li>
+        <li>Remaining formatting fixes</li>
+        <li>Hardware assembly pending</li>
+    </ul>
+</section>
+
+<section data-aos="fade-up">
+    <h2>Climate Relevance & Engineering Tradeoffs</h2>
+    <ul>
+        <li><strong>Sensors:</strong> BME680 + CCS811 for broad environmental profile</li>
+        <li><strong>ESP32:</strong> low‑power, Wi‑Fi, mature ecosystem</li>
+        <li><strong>CSV:</strong> human‑readable, easy to debug</li>
+        <li><strong>Long‑term monitoring:</strong> climate trends + anomaly detection</li>
+    </ul>
+</section>
+
+<section data-aos="fade-up">
+    <h2>Lessons Learned</h2>
+    <ul>
+        <li>Modular host‑side design is extremely effective</li>
+        <li>Binary conversion improves performance</li>
+        <li>Trend detection requires careful timestamp normalization</li>
+        <li>Anomaly detection must handle sensor noise</li>
+        <li>SD reliability is critical</li>
+        <li>Firmware complexity depends heavily on sensor APIs</li>
+    </ul>
+</section>
+
+<section data-aos="fade-up">
+    <h2>Future Work</h2>
+    <h3>Firmware</h3>
+    <ul>
+        <li>Smoothing filters</li>
+        <li>UART telemetry + CRC</li>
+        <li>Wi‑Fi endpoint</li>
+        <li>Power budget documentation</li>
+    </ul>
+
+    <h3>Host Tool</h3>
+    <ul>
+        <li>Kalman filtering</li>
+        <li>Cloud upload</li>
+        <li>Real‑time dashboard</li>
+    </ul>
+
+    <h3>Hardware</h3>
+    <ul>
+        <li>Wiring diagrams</li>
+        <li>Enclosure</li>
+        <li>Airflow considerations</li>
+        <li>Stress testing</li>
+    </ul>
+</section>
+
+<section data-aos="fade-up">
+    <h2>Source Code</h2>
+    <p>
+        Full project available on GitHub:<br>
+        <a href="https://github.com/williamkindell460-alt/Climate-Based-Monitoring-Device">
+            github.com/williamkindell460-alt/Climate-Based-Monitoring-Device
+        </a>
+    </p>
+</section>
+
+<footer>
+    © 2026 William Kindell
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>
