@@ -38,24 +38,29 @@
     <p>Fill out the form below and I’ll receive your message directly via email.</p>
 
     <form action="https://formsubmit.co/2da7e2c6706784915c5dfa69c63c2dfc" method="POST" class="contact-form">
-
+    
+        <!-- Anti-bot honeypot -->
+        <input type="text" name="_honey" style="display:none">
+    
         <!-- FormSubmit settings -->
         <input type="hidden" name="_subject" value="New message from your website">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
-
+        <input type="hidden" name="_next" value="https://williamkindell460-alt.github.io/contact/success.html">
+        <input type="hidden" name="_limit" value="5">
+    
         <label>First Name</label>
-        <input type="text" name="first-name" required>
-
+        <input type="text" name="first-name" autocomplete="given-name" placeholder="John" required>
+    
         <label>Last Name</label>
-        <input type="text" name="last-name" required>
-
-        <label>Email</label>
-        <input type="email" name="email" required>
-
+        <input type="text" name="last-name" autocomplete="family-name" placeholder="Doe" required>
+    
+        <label>Email (optional)</label>
+        <input type="email" name="email" autocomplete="email" placeholder="you@example.com">
+    
         <label>Message</label>
-        <textarea name="message" rows="6" required></textarea>
-
+        <textarea name="message" rows="6" autocomplete="off" placeholder="Write your message here..." required></textarea>
+    
         <button type="submit" class="theme-btn">Send Message</button>
     </form>
 </section>
