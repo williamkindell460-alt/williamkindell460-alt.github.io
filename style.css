@@ -140,6 +140,34 @@ footer {
     color: #cfcfcf;
     margin-bottom: 15px;
 }
+/* LIGHT MODE GRID + CARD */
+.light-mode .grid {
+    background: transparent;
+}
+
+.light-mode .card {
+    background: rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: none;
+}
+
+.light-mode .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.light-mode .card-title {
+    color: #0077cc;
+}
+
+.light-mode .card-desc {
+    color: #444;
+}
+
+.light-mode .card-content {
+    color: #222;
+}
+
 /* Contact Form */
 .contact-form {
     display: flex;
