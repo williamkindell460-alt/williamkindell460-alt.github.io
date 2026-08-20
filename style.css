@@ -11,6 +11,11 @@ header {
     padding: 80px 20px;
 }
 
+.hero-header {
+    text-align: center;
+    padding: 80px 20px;
+}
+
 #site-header {
     position: relative;
     z-index: 1000;
