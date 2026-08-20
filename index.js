@@ -1,11 +1,16 @@
-// Apply saved theme on startup
-if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light-mode");
-}
+document.addEventListener("DOMContentLoaded", () => {
+    // Apply saved theme
+    if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light-mode");
+    }
+
+    // Load components
+    loadComponent("site-header", "/include/header.html");
+    loadComponent("site-footer", "/include/footer.html");
+});
 
 // Initialize scripts AFTER header/footer load
 function initSiteScripts() {
-    // Mobile Navigation Toggle
     const navToggle = document.getElementById("nav-toggle");
     const navLinks = document.getElementById("nav-links");
 
@@ -15,7 +20,6 @@ function initSiteScripts() {
         });
     }
 
-    // Theme Toggle Button
     const toggle = document.getElementById("theme-toggle");
 
     if (toggle) {
@@ -40,18 +44,11 @@ async function loadComponent(id, file) {
         const html = await res.text();
         el.innerHTML = html;
 
-        // Re-run scripts AFTER the component is injected
-        initSiteScripts();
-
-        // Re-run AOS so animations apply to dynamically loaded content
-        if (window.AOS) {
-            AOS.refresh();
+        if (id === "site-header") {
+            initSiteScripts();
+            if (window.AOS) AOS.refresh();
         }
     } catch (err) {
         console.error("Component load failed:", file, err);
     }
 }
-
-// Inject header + footer
-loadComponent("site-header", "/include/header.html");
-loadComponent("site-footer", "/include/footer.html");
