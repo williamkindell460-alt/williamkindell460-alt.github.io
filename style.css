@@ -11,6 +11,17 @@ header {
     padding: 80px 20px;
 }
 
+#site-header {
+    position: relative;
+    z-index: 1000;
+}
+
+#site-header .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 h1 {
     font-size: 3rem;
     font-weight: 800;
