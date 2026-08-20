@@ -318,3 +318,85 @@ body, section, h1, h2, h3, p, a {
     background: rgba(0,0,0,0.1);
     color: #222;
 }
+/* Footer */
+.main-footer {
+    background: var(--bg-secondary);
+    padding: 2.5rem 1.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--border-color);
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-section h4 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 0.3rem 0;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: opacity 0.2s ease;
+}
+
+.footer-section a:hover {
+    opacity: 0.7;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Footer */
+@media (max-width: 700px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* LIGHT MODE FOOTER */
+.light-mode .main-footer {
+    background: rgba(0,0,0,0.05);
+    border-top: 1px solid rgba(0,0,0,0.1);
+    color: #222;
+}
+
+.light-mode .footer-section h4 {
+    color: #0077cc;
+}
+
+.light-mode .footer-section a {
+    color: #0077cc;
+}
+
+.light-mode .footer-section a:hover {
+    color: #005fa3;
+}
+
+.light-mode .footer-bottom {
+    color: #444;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
