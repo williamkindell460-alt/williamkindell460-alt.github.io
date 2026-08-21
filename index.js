@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
     loadComponent("site-footer", "/include/footer.html");
     // Expandable and collapseable file structure.
     initTreeControls();
+    // Back to top button
+    initBackToTop();
 });
 
 // Initialize scripts AFTER header/footer load
@@ -69,4 +71,22 @@ function initTreeControls() {
             document.querySelectorAll("details").forEach(d => d.open = false);
         });
     }
+}
+function initBackToTop() {
+    const btn = document.getElementById("back-to-top");
+    if (!btn) return;
+
+    // Show button when scrolling down
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+            btn.classList.add("show");
+        } else {
+            btn.classList.remove("show");
+        }
+    });
+
+    // Scroll to top when clicked
+    btn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
 }
