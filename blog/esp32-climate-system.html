@@ -48,61 +48,252 @@
 
 <section data-aos="fade-up">
     <h2>Repository Architecture</h2>
+    <details>
+        <summary>C: (root)</summary>
+        <pre>
+            .clang-format
+            CMakeLists.txt
+            LICENSE
+            README.md
 
-    <!-- Placeholder for architecture diagram -->
-    <div class="placeholder">
-        <!-- Insert architecture diagram here -->
-        [Architecture Diagram Placeholder]
-    </div>
+            workflows/
+            └── cmake-single-platform.yml
+        </pre>
+    </details>
 
-    <h3>01_firmware/</h3>
-    <ul>
-        <li>Sensor drivers</li>
-        <li>Logging system</li>
-        <li>Error codes</li>
-        <li>Sleep cycle logic</li>
-        <li>Main application</li>
-    </ul>
+    <details>
+        <summary>.vscode/</summary>
+        <pre>
+            c_cpp_properties.json
+            settings.json
+        </pre>
+    </details>
 
-    <h3>02_host_tool/</h3>
-    <ul>
-        <li>CSV ingestion</li>
-        <li>Binary export</li>
-        <li>Statistics</li>
-        <li>Trend detection</li>
-        <li>Anomaly detection</li>
-        <li>Plot generation</li>
-        <li>Summary report creation</li>
-        <li>CLI flag parser</li>
-        <li>Unit tests + pipeline tests</li>
-        <li>Performance benchmarks</li>
-    </ul>
+    <details>
+        <summary>01_firmware/</summary>
 
-    <h3>03_data/</h3>
-    <ul>
-        <li>Raw logs</li>
-        <li>Processed CSV files</li>
-        <li>Binary files</li>
-        <li>Generated plots</li>
-    </ul>
+        <details>
+            <summary>ESP32_sensors/</summary>
+            <pre>
+                CMakeLists.txt
+                hardware_checklist.md
+                sdkconfig
+                top-level_architecture_overview.md
+            </pre>
 
-    <h3>04_docs/</h3>
-    <ul>
-        <li>Hardware setup</li>
-        <li>Firmware overview</li>
-        <li>Host tool pipeline</li>
-        <li>Architecture notes</li>
-        <li>Climate relevance</li>
-        <li>Engineering tradeoffs</li>
-    </ul>
+            <details>
+                <summary>components/</summary>
 
-    <h3>05_scripts/</h3>
-    <ul>
-        <li>Firmware flashing</li>
-        <li>Pipeline runner</li>
-        <li>Test runner</li>
-        <li>CSV conversion utilities</li>
-    </ul>
+                <details>
+                    <summary>bme680/</summary>
+                    <pre>
+                        bme680.c
+                        bme680.h
+                        BME680_architechure.md
+                        CMakeLists.txt
+                    </pre>
+                </details>
+
+                <details>
+                    <summary>ccs811/</summary>
+                    <pre>
+                        ccs811.c
+                        ccs811.h
+                        CCS811_architecture.md
+                        CMakeLists.txt
+                    </pre>
+                </details>
+
+                <details>
+                    <summary>i2c_bus/</summary>
+                    <pre>
+                        i2c_bus.c
+                        i2c_bus.h
+                        i2c_bus_architecture.md
+                        CMakeLists.txt
+                    </pre>
+                </details>
+
+                <details>
+                    <summary>sd_logger/</summary>
+                    <pre>
+                        sd_logger.c
+                        sd_logger.h
+                        sd_logger_architecture.md
+                        CMakeLists.txt
+                    </pre>
+                </details>
+
+                <details>
+                    <summary>spi_bus/</summary>
+                    <pre>
+                        spi_bus.c
+                        spi_bus.h
+                        spi_bus_architecture.md
+                        CMakeLists.txt
+                    </pre>
+                </details>
+
+            </details>
+
+            <details>
+                <summary>main/</summary>
+                <pre>
+                    main.c
+                    main_architecture.md
+                    CMakeLists.txt
+                </pre>
+            </details>
+
+        </details>
+    </details>
+
+    <details>
+        <summary>02_host_tool/</summary>
+        <pre>
+            CMakeLists.txt
+        </pre>
+
+        <details>
+            <summary>examples/</summary>
+
+            <details>
+                <summary>images/</summary>
+                <pre>
+                    anomalous_sample_plot.png
+                    normal_sample_plot.png
+                </pre>
+            </details>
+
+            <details>
+                <summary>sample_input/</summary>
+                <pre>
+                    sample_log_01_normal.csv
+                    sample_log_02_anomalous.csv
+                </pre>
+            </details>
+
+            <details>
+                <summary>sample_output/</summary>
+                <pre>
+                    anomalous_sample_output.md
+                    descriptions.md
+                    normal_sample_output.md
+                </pre>
+            </details>
+
+        </details>
+
+        <details>
+            <summary>include/</summary>
+            <pre>
+                analyzer.h
+                anomaly_detection.h
+                color.h
+                run_pipeline.h
+                trend_detection.h
+            </pre>
+        </details>
+
+        <details>
+            <summary>src/</summary>
+
+            <details>
+                <summary>data_analysis/</summary>
+                <pre>
+                    analyzer.c
+                    anomaly_detection.c
+                    main.c
+                    run_pipeline.c
+                    trend_detection.c
+                </pre>
+            </details>
+
+            <details>
+                <summary>data_reading_plotting/</summary>
+                <pre>
+                    plot_data.py
+                    sensor_reader.py
+                </pre>
+            </details>
+
+        </details>
+
+        <details>
+            <summary>tests/</summary>
+            <pre>
+                test_anomalies.c
+                test_minmax.c
+                test_pipeline_default.c
+                test_pipeline_trends_anomalies.c
+                test_trends.c
+            </pre>
+
+            <details>
+                <summary>output_data/</summary>
+                <pre>
+                    output_data.md
+                </pre>
+            </details>
+        </details>
+
+        <details>
+            <summary>third_party/</summary>
+
+            <details>
+                <summary>unity/</summary>
+                <pre>
+                    unity.c
+                    unity.h
+                    unity_internals.h
+                </pre>
+            </details>
+
+        </details>
+
+    </details>
+
+    <details>
+        <summary>03_data/</summary>
+
+        <details>
+            <summary>output_data/</summary>
+            <pre>
+                output_data.md
+            </pre>
+        </details>
+
+        <details>
+            <summary>plots/</summary>
+            <pre>
+                plots.md
+            </pre>
+        </details>
+
+    </details>
+
+    <details>
+        <summary>04_docs/</summary>
+        <pre>
+            analysis_pipeline.md
+            architecture.md
+            firmware_overview.md
+            hardware_setup.md
+            progress_reports.md
+            roadmap.md
+        </pre>
+    </details>
+
+    <details>
+        <summary>05_scripts/</summary>
+        <pre>
+            flash_firmware.sh
+            generate_telemetry.py
+            run_pipeline.sh
+            run_tests.sh
+        </pre>
+    </details>
+
 </section>
 
 <section data-aos="fade-up">
@@ -134,7 +325,6 @@
 <section data-aos="fade-up">
     <h2>Host‑Side Analysis Pipeline</h2>
 
-    <!-- Placeholder for data visualization example -->
     <div class="placeholder">
         <!-- Insert example PNG plot or sparkline screenshot -->
         [Data Visualization Placeholder]
