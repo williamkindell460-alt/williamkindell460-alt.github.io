@@ -52,3 +52,19 @@ async function loadComponent(id, file) {
         console.error("Component load failed:", file, err);
     }
 }
+function initTreeControls() {
+    const expandBtn = document.getElementById("expand-all");
+    const collapseBtn = document.getElementById("collapse-all");
+
+    if (expandBtn) {
+        expandBtn.addEventListener("click", () => {
+            document.querySelectorAll("details").forEach(d => d.open = true);
+        });
+    }
+
+    if (collapseBtn) {
+        collapseBtn.addEventListener("click", () => {
+            document.querySelectorAll("details").forEach(d => d.open = false);
+        });
+    }
+}

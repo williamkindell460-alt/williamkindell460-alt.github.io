@@ -579,6 +579,7 @@ pre {
 .light-mode pre {
     color: #333;
 }
+/*repo tree*/
 .tree-controls {
     margin: 20px 0;
     display: flex;
@@ -592,12 +593,6 @@ pre {
     cursor: pointer;
     border: 1px solid transparent;
     transition: background 0.3s, border-color 0.3s;
-}
-
-.tree-controls button {
-    background: rgba(255,255,255,0.08);
-    color: #fff;
-    border-color: rgba(255,255,255,0.15);
 }
 
 /* LIGHT MODE */
