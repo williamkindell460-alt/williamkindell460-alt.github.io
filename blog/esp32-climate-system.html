@@ -396,18 +396,87 @@
 <section data-aos="fade-up" id="execution-flow">
     <h2>Execution Flow</h2>
 
-    <!-- Placeholder for pipeline diagram -->
-    <div class="placeholder">
-        <!-- Insert pipeline diagram here -->
-        [Pipeline Diagram Placeholder]
+    <div class="pipeline-step">
+        <h3>1. ESP32 Firmware</h3>
+        <ul>
+            <li>I2C bus initialization</li>
+            <li>Sensor configuration (BME680 + CCS811)</li>
+            <li>Stable 2‑minute measurement loop</li>
+            <li>Unified environmental logging</li>
+        </ul>
     </div>
 
-    <ol>
-        <li>Sensor Data Ingestion</li>
-        <li>Data Analysis</li>
-        <li>Plot Generation</li>
-        <li>Summary Output</li>
-    </ol>
+    <div class="pipeline-arrow">↓</div>
+
+    <div class="pipeline-step">
+        <h3>2. Periodic Sensor Measurements</h3>
+        <ul>
+            <li>Temperature, humidity, pressure</li>
+            <li>Gas resistance (IAQ)</li>
+            <li>eCO₂ + TVOC readings</li>
+            <li>Timestamped data collection</li>
+        </ul>
+    </div>
+
+    <div class="pipeline-arrow">↓</div>
+
+    <div class="pipeline-step">
+        <h3>3. CSV Log Generation</h3>
+        <ul>
+            <li>Formatted sensor rows</li>
+            <li>Portable CSV output</li>
+            <li>Host‑tool compatible structure</li>
+            <li>Stored in device output directory</li>
+        </ul>
+    </div>
+
+    <div class="pipeline-arrow">↓</div>
+
+    <div class="pipeline-step">
+        <h3>4. Sensor Data Ingestion (Host Tool)</h3>
+        <ul>
+            <li>Newest CSV discovery</li>
+            <li>CSV parsing + validation</li>
+            <li>Timestamp normalization</li>
+            <li>Binary export (output.bin)</li>
+        </ul>
+    </div>
+
+    <div class="pipeline-arrow">↓</div>
+
+    <div class="pipeline-step">
+        <h3>5. Data Analysis</h3>
+        <ul>
+            <li>Basic statistics</li>
+            <li>Trend detection</li>
+            <li>Anomaly detection</li>
+            <li>Environmental interpretation</li>
+        </ul>
+    </div>
+
+    <div class="pipeline-arrow">↓</div>
+
+    <div class="pipeline-step">
+        <h3>6. Plot Generation</h3>
+        <ul>
+            <li>CSV loading</li>
+            <li>Multi‑channel normalization</li>
+            <li>Six synchronized time‑series plots</li>
+            <li>Timestamped PNG export</li>
+        </ul>
+    </div>
+
+    <div class="pipeline-arrow">↓</div>
+
+    <div class="pipeline-step">
+        <h3>7. Summary Output</h3>
+        <ul>
+            <li>Statistics + sparklines</li>
+            <li>Anomaly results</li>
+            <li>Trend overview</li>
+            <li>Final human‑readable report</li>
+        </ul>
+    </div>
 </section>
 
 <section data-aos="fade-up" id="development-progress">
