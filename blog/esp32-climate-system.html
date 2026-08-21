@@ -21,8 +21,37 @@
     <h1>ESP32 Climate Monitoring System</h1>
     <p>A complete environmental monitoring system featuring an ESP32 firmware stack and a fully‑integrated host‑side analysis pipeline.</p>
 </header>
+<section data-aos="fade-up" class="toc-section">
+    <h2>Contents</h2>
+    <ul class="toc-list">
+        <li><a href="#intro-hook">Why This Project Matters</a></li>
+        <li><a href="#project-overview">Project Overview</a></li>
+        <li><a href="#repo-architecture">Repository Architecture</a></li>
+        <li><a href="#firmware-status">Firmware Status</a></li>
+        <li><a href="#analysis-pipeline">Host-Side Analysis Pipeline</a></li>
+        <li><a href="#execution-flow">Execution Flow</a></li>
+        <li><a href="#development-progress">Development Progress</a></li>
+        <li><a href="#climate-relevance">Climate Relevance & Tradeoffs</a></li>
+        <li><a href="#lessons-learned">Lessons Learned</a></li>
+        <li><a href="#future-work">Future Work</a></li>
+        <li><a href="#key-takeaways">Key Takeaways</a></li>
+        <li><a href="#source-code">Source Code</a></li>
+    </ul>
+</section>
+<section data-aos="fade-up" id="intro-hook">
+    <h2>Why This Project Matters</h2>
+    <p>
+        Climate and air‑quality data is becoming increasingly important. Not just for research labs,
+        but for homes, workplaces, and long‑term environmental monitoring. This project shows how a
+        compact ESP32, paired with reliable sensors and a robust analysis pipeline, can produce
+        meaningful insights about the world around us. Whether you're an engineer, a hobbyist, or
+        simply curious about environmental data, this system demonstrates how modern embedded
+        hardware and software can work together to reveal trends, detect anomalies, and help us
+        understand our environment more clearly.
+    </p>
+</section>
 
-<section data-aos="fade-up">
+<section data-aos="fade-up" id="project-overview">
     <h2>Project Overview</h2>
     <p>
         This project is a long‑term environmental monitoring system built around an
@@ -46,7 +75,7 @@
     </ul>
 </section>
 
-<section data-aos="fade-up">
+<section data-aos="fade-up" id="repo-architecture">
     <h2>Repository Architecture</h2>
     <div class="tree-controls">
         <button id="expand-all" class="theme-btn tree-btn">Expand All</button>
@@ -288,7 +317,7 @@
     </details>
 </section>
 
-<section data-aos="fade-up">
+<section data-aos="fade-up" id="firmware-status">
     <h2>Firmware Status</h2>
 
     <div class="placeholder">
@@ -314,7 +343,7 @@
     </ul>
 </section>
 
-<section data-aos="fade-up">
+<section data-aos="fade-up" id="analysis-pipeline">
     <h2>Host‑Side Analysis Pipeline</h2>
 
     <div class="placeholder">
@@ -355,7 +384,7 @@
     </ul>
 </section>
 
-<section data-aos="fade-up">
+<section data-aos="fade-up" id="execution-flow">
     <h2>Execution Flow</h2>
 
     <!-- Placeholder for pipeline diagram -->
@@ -372,7 +401,7 @@
     </ol>
 </section>
 
-<section data-aos="fade-up">
+<section data-aos="fade-up" id="development-progress">
     <h2>Development Progress</h2>
     <h3>Host Tool (Days 1–7)</h3>
     <ul>
@@ -403,7 +432,7 @@
     </ul>
 </section>
 
-<section data-aos="fade-up">
+<section data-aos="fade-up" id="climate-relevance">
     <h2>Climate Relevance & Engineering Tradeoffs</h2>
     <ul>
         <li><strong>Sensors:</strong> BME680 + CCS811 for broad environmental profile</li>
@@ -413,7 +442,7 @@
     </ul>
 </section>
 
-<section data-aos="fade-up">
+<section data-aos="fade-up" id="lessons-learned">
     <h2>Lessons Learned</h2>
     <ul>
         <li>Modular host‑side design is extremely effective</li>
@@ -425,7 +454,7 @@
     </ul>
 </section>
 
-<section data-aos="fade-up">
+<section data-aos="fade-up" id="future-work">
     <h2>Future Work</h2>
     <h3>Firmware</h3>
     <ul>
@@ -448,6 +477,18 @@
         <li>Enclosure</li>
         <li>Airflow considerations</li>
         <li>Stress testing</li>
+    </ul>
+</section>
+
+<section data-aos="fade-up" id="key-takeaways">
+    <h2>Key Takeaways</h2>
+    <ul>
+        <li>The ESP32 provides a reliable, low‑power foundation for long‑term climate monitoring.</li>
+        <li>The firmware is modular, sensor‑driven, and designed for maintainability.</li>
+        <li>The host‑side toolchain performs full ingestion, analysis, anomaly detection, and plotting.</li>
+        <li>The repository architecture is structured for clarity, scalability, and professional development.</li>
+        <li>Future improvements include Wi‑Fi telemetry, CRC framing, cloud upload, and real‑time dashboards.</li>
+        <li>This project demonstrates how embedded systems and data analysis can work together to reveal meaningful environmental insights.</li>
     </ul>
 </section>
 
