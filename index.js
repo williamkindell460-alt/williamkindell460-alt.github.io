@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Load components
     loadComponent("site-header", "/include/header.html");
     loadComponent("site-footer", "/include/footer.html");
+    // Expandable and collapseable file structure.
+    initTreeControls();
 });
 
 // Initialize scripts AFTER header/footer load
