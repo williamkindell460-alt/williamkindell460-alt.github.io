@@ -586,22 +586,7 @@ pre {
     gap: 12px;
 }
 
-.tree-controls button {
-    padding: 8px 14px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: background 0.3s, border-color 0.3s;
+.tree-btn {
+    font-size: 0.9rem;
 }
 
-/* LIGHT MODE */
-.light-mode .tree-controls button {
-    background: rgba(0,0,0,0.05);
-    color: #222;
-    border-color: rgba(0,0,0,0.15);
-}
-
-.tree-controls button:hover {
-    opacity: 0.85;
-}
