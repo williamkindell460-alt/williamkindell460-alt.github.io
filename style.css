@@ -686,19 +686,6 @@ pre {
     color: #0077cc;
 }
 /* Execution Flow section */
-.pipeline-step {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 14px;
-    padding: 20px;
-    backdrop-filter: blur(10px);
-    margin: 20px 0;
-}
-
-.light-mode .pipeline-step {
-    background: rgba(0,0,0,0.05);
-    border: 1px solid rgba(0,0,0,0.1);
-}
 
 .pipeline-step ul {
     list-style: none;
@@ -708,15 +695,4 @@ pre {
 
 .pipeline-step ul li {
     margin: 6px 0;
-}
-
-.pipeline-arrow {
-    text-align: center;
-    font-size: 2rem;
-    color: #00eaff;
-    margin: 10px 0;
-}
-
-.light-mode .pipeline-arrow {
-    color: #0077cc;
 }
