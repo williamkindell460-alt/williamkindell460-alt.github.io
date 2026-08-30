@@ -695,3 +695,25 @@ pre {
 .pipeline-step ul li {
     margin: 6px 0;
 }
+
+/* CV Button */
+.cv-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: rgba(255,255,255,0.15);
+    color: #e6e6e6;
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+}
+
+.cv-btn:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.05);
+}
+.light-mode .cv-btn {
+    background: rgba(0,0,0,0.1);
+    color: #222;
+}
