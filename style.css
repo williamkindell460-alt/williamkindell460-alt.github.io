@@ -616,6 +616,21 @@ pre {
     background: rgba(0,0,0,0.1);
     color: #222;
 }
+/* Mobile */
+@media (max-width: 768px) {
+    .back-to-top-btn {
+        right: 15px;
+        bottom: 20px;
+        bottom: calc(20px + env(safe-area-inset-bottom));
+        padding: 10px 14px;
+        font-size: 0.85rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.btn-label { display: none; }
 /*TOC*/
 .toc-list {
     list-style: none;
