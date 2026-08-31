@@ -491,7 +491,6 @@ body, section, h1, h2, h3, p, a {
     align-items: center;
     gap: 40px;
     padding: 10px;
-    text-align: center;
 }
 
 .profile-photo img {
