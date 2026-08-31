@@ -596,8 +596,8 @@ pre {
 /* Back to Top Button */
 .back-to-top-btn {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 60px;
+    right: 60px;
     z-index: 3000;
     opacity: 0;
     pointer-events: none;
